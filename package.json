@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "build:styles": "postcss src/app.css -o src/styles.css",
     "prebuild": "npm run build:styles",
-    "prestart": "npm run build:styles"
+    "prestart": "npm run build:styles",
+    "build:prod": "env NODE_ENV=production npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
