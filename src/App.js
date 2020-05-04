@@ -7,7 +7,7 @@ function App() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gray-300 min-h-screen">
       <PageHeader />
 
-      <div className="mt-6">
+      <div className="max-w-3xl mx-auto mt-6">
         <Task title="Do the laundry" body="sort, wash and hang it up to dry." />        
       </div>
     </div>
