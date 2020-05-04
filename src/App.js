@@ -1,6 +1,6 @@
 import React from 'react';
-import Task from './Task';
 import PageHeader from './components/PageHeader';
+import Task from './Task';
 
 function App() {
   return (
