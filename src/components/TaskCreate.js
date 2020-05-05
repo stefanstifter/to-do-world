@@ -29,7 +29,7 @@ function TaskCreate() {
           </div>
           <div className="mt-4 flex justify-end">
             <Button 
-              onClick=""
+              onClick={() => {}}
               text="Create a new Task"
             />
           </div>
