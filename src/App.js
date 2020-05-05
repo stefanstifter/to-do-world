@@ -1,7 +1,7 @@
 import React from 'react';
-import PageHeader from './components/PageHeader';
 import Task from './Task';
-import TaskCreateForm from './TaskCreateForm';
+import PageHeader from './components/PageHeader';
+import TaskCreate from './components/TaskCreate';
 
 function App() {
   const data = [
@@ -17,13 +17,13 @@ function App() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen bg-gray-50">
       <div className="max-w-3xl mx-auto py-12">
-        
+
         <PageHeader />
-        
+
         <div className="mt-6 mb-20">
-          <TaskCreateForm />
+          <TaskCreate />
         </div>
-        
+
         { taskList }
 
       </div>

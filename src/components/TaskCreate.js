@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from './components/Card';
-import Button from './components/Button';
+import Card from './Card';
+import Button from './Button';
 
-function TaskCreateForm(params) {
+function TaskCreate() {
   return (
     <Card
       header={<h2 className="text-xl text-teal-900">Create a new Task!</h2>}
@@ -39,5 +39,5 @@ function TaskCreateForm(params) {
     );
   }
   
-  export default TaskCreateForm;
+  export default TaskCreate;
   
