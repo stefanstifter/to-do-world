@@ -7,13 +7,16 @@ class Task extends React.Component {
   constructor() {
     super();
     this.state = {completed: false};
+
+    // explicity bind function to a component instance <https://reactjs.org/docs/faq-functions.html>
+    this.toggleTask = this.toggleTask.bind(this);
   }
 
   setTaskCompleted(done) {
     this.setState({completed: done});
   }
   
-  toggleTask = () => {                                                      // explicity bind action handler to the context of that class
+  toggleTask() {
     this.setTaskCompleted(!this.state.completed);
   }
 
