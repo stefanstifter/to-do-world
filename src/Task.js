@@ -1,6 +1,6 @@
 import React from 'react';
-import StatusBadge from './components/StatusBadge';
 import Button from './components/Button';
+import StatusBadge from './components/StatusBadge';
 
 class Task extends React.Component {
   constructor() {
@@ -18,7 +18,7 @@ class Task extends React.Component {
 
   render() {
     return (
-      <div className="bg-white overflow-hidden shadow rounded-lg">
+      <div className="mb-4 bg-white overflow-hidden shadow rounded-lg">
         <div className="border-b border-gray-200 px-4 py-5 sm:px-6 flex items-center justify-between">
           <h2 className={"mt-1 text-xl " + (this.state.completed ? 'text-gray-500' : '')}>{ this.props.title }</h2>
           <StatusBadge success={ this.state.completed } />
@@ -37,4 +37,3 @@ class Task extends React.Component {
 }
   
 export default Task;
-  
