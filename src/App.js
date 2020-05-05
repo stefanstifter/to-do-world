@@ -4,13 +4,13 @@ import Task from './Task';
 
 function App() {
   const data = [
-    {title: "Do the laundry", body: "Sort, wash and hang it up to dry."},
-    {title: "Go To Work", body: "Some additional..."},
-    {title: "Go To School", body: "Some additional..."},
+    {id:1, title: "Do the laundry", body: "Sort, wash and hang it up to dry."},
+    {id:2, title: "Go To Work", body: "Some additional..."},
+    {id:3, title: "Go To School", body: "Some additional..."},
   ];
 
   let taskList = data.map((task) => {
-    return <Task title={task.title} body={task.body} /> 
+    return <Task title={ task.title } body={ task.body } key={ task.id }/> 
   })
 
   return (
