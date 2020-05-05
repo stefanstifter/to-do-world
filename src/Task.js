@@ -36,8 +36,9 @@ class Task extends React.Component {
         }
         footer={
           <Button 
-            text={this.state.completed ? 'Reopen Task' : 'Complete Task'} 
             onClick={ this.toggleTask }
+            secondary={ this.state.completed }
+            text={this.state.completed ? 'Reopen Task' : 'Complete Task'} 
           />
         }
       />
