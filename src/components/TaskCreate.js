@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import Button from './Button';
 
-function TaskCreate() {
+function TaskCreate(props) {
   return (
     <Card
       header={<h2 className="text-xl text-teal-900">Create a new Task!</h2>}
@@ -29,15 +29,14 @@ function TaskCreate() {
           </div>
           <div className="mt-4 flex justify-end">
             <Button 
-              onClick={() => {}}
+              onClick={ props.onCreate }
               text="Create a new Task"
             />
           </div>
         </form>
       }
     />
-    );
-  }
-  
-  export default TaskCreate;
-  
+  );
+}
+
+export default TaskCreate;

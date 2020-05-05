@@ -10,9 +10,7 @@ class App extends React.Component {
   }
   
   render() {
-    const data = this.state.tasks;
-    
-    let taskList = data.map((task) => {
+    let taskList = this.state.tasks.map((task) => {
       return <Task title={ task.title } body={ task.body } key={ task.id }/> 
     })
   
@@ -21,12 +19,18 @@ class App extends React.Component {
         <div className="max-w-3xl mx-auto py-12">
           <PageHeader />
           <div className="mt-6 mb-20">
-            <TaskCreate />
+            <TaskCreate onCreate={ this.pushToState } />
           </div>
           { taskList }
         </div>
       </div>
     );
+  }
+
+  pushToState() {
+    console.log('pushing to state');
+
+    // https://reactjs.org/docs/forms.html
   }
 
   receiveInitialTasksData() {
