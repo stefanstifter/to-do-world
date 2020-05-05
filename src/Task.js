@@ -25,7 +25,7 @@ class Task extends React.Component {
       <Card 
         header={
           <div className="flex items-center justify-between">
-            <h2 className={"mt-1 text-xl " + (this.state.completed ? 'text-gray-500' : '')}>{ this.props.title }</h2>
+            <h2 className={"text-xl " + (this.state.completed ? 'text-gray-500' : '')}>{ this.props.title }</h2>
             <StatusBadge success={ this.state.completed } />
           </div>
         }
@@ -35,11 +35,13 @@ class Task extends React.Component {
           </span>
         }
         footer={
-          <Button 
-            onClick={ this.toggleTask }
-            secondary={ this.state.completed }
-            text={this.state.completed ? 'Reopen Task' : 'Complete Task'} 
-          />
+          <div className="flex justify-end">
+            <Button 
+              onClick={ this.toggleTask }
+              secondary={ true }
+              text={this.state.completed ? 'Reopen Task' : 'Complete Task'}
+            />
+          </div>
         }
       />
     );
