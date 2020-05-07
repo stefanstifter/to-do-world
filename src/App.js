@@ -1,12 +1,14 @@
 import React from 'react';
 import Task from './Task';
 import PageHeader from './components/PageHeader';
-import TaskCreate from './components/TaskCreate';
+import TaskCreateForm from './components/TaskCreateForm';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {tasks: this.receiveInitialTasksData()};
+
+    this.updateTasks = this.updateTasks.bind(this);
   }
   
   render() {
@@ -19,7 +21,7 @@ class App extends React.Component {
         <div className="max-w-3xl mx-auto py-12">
           <PageHeader />
           <div className="mt-6 mb-20">
-            <TaskCreate onCreate={ this.pushToState } />
+            <TaskCreateForm onCreate={ this.updateTasks } />
           </div>
           { taskList }
         </div>
@@ -27,10 +29,10 @@ class App extends React.Component {
     );
   }
 
-  pushToState() {
-    console.log('pushing to state');
-
-    // https://reactjs.org/docs/forms.html
+  updateTasks(data) {
+    this.setState(prevState => ({
+      tasks: [{id:99, title: data.title, body: data.description}, ...prevState.tasks]
+    }));
   }
 
   receiveInitialTasksData() {
