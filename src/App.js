@@ -30,6 +30,8 @@ class App extends React.Component {
   }
 
   updateTasks(data) {
+
+    // @ToDo: figure out a unique key (id) for the new Task
     this.setState(prevState => ({
       tasks: [{id:99, title: data.title, body: data.description}, ...prevState.tasks]
     }));
@@ -38,8 +40,8 @@ class App extends React.Component {
   receiveInitialTasksData() {
     return [
       {id:1, title: "Do the laundry", body: "Sort, wash and hang it up to dry."},
-      {id:2, title: "Go To Work", body: "Some additional..."},
-      {id:3, title: "Go To School", body: "Some additional..."},
+      {id:2, title: "Practice Piano", body: "Finish this one long overdue exercise."},
+      {id:3, title: "Shop Groceries", body: "Go to the market and buy some fruits and veggies."},
     ];
   }
 }
