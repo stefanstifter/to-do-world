@@ -25,7 +25,7 @@ class Task extends React.Component {
       <Card 
         header={
           <div className="flex items-center justify-between">
-            <h2 className={"text-xl " + (this.state.completed ? 'text-gray-500' : '')}>{ this.props.title }</h2>
+            <h2 className={"text-xl " + (this.state.completed ? 'text-gray-500 line-through' : '')}>{ this.props.title }</h2>
             <StatusBadge success={ this.state.completed } />
           </div>
         }
